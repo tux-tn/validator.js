@@ -25,7 +25,7 @@ jobs:
       run: npm test
     - if: matrix.node-version == 14
       name: Generate coverage file
-      run: npm run test:ci > coverage.lcov
+      run: npm run test:ci
     - if: matrix.node-version == 14
       name: Send coverage info to Codecov
       uses: codecov/codecov-action@v1
