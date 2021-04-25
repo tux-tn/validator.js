@@ -66,7 +66,7 @@
     "build": "npm run build:browser && npm run build:node && npm run build:es",
     "pretest": "npm run build && npm run lint",
     "test": "nyc mocha --require @babel/register --reporter dot",
-    "test:ci": "nyc report --reporter=text-lcov"
+    "test:ci": "nyc report --reporter=clover"
   },
   "engines": {
     "node": ">= 0.10"
