@@ -12,7 +12,6 @@ jobs:
         node-version: 16
         check-latest: true
         registry-url: https://registry.npmjs.org/
-        cache: npm
     - name: Checkout Repository
       uses: actions/checkout@v2
     - name: Install Dependencies
