@@ -15,8 +15,10 @@ jobs:
         cache: npm
     - name: Checkout Repository
       uses: actions/checkout@v2
+    - name: Install Dependencies
+      run: npm install
     - name: Run Tests
-      run: npm cit
+      run: npm test
     - name: Publish Package to NPM Registry
       run: npm publish
       env:
