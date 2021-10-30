@@ -46,6 +46,7 @@ const patterns = {
   LT: /^LT\-\d{5}$/,
   LU: fourDigit,
   LV: /^LV\-\d{4}$/,
+  LK: fiveDigit,
   MX: fiveDigit,
   MT: /^[A-Za-z]{3}\s{0,1}\d{4}$/,
   MY: fiveDigit,
@@ -78,7 +79,8 @@ export default function isPostalCode(str, locale) {
   assertString(str);
   if (locale in patterns) {
     return patterns[locale].test(str);
-  } else if (locale === 'any') {
+  }
+  if (locale === 'any') {
     for (const key in patterns) {
       // https://github.com/gotwarlost/istanbul/blob/master/ignoring-code-for-coverage.md#ignoring-code-for-coverage-purposes
       // istanbul ignore else
