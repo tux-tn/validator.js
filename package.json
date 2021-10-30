@@ -6,6 +6,7 @@
   "main": "index.js",
   "module": "es/index.es.mjs",
   "browser": "validator.js",
+  "unpkg": "validator.min.js",
   "sideEffects": false,
   "homepage": "https://github.com/validatorjs/validator.js",
   "files": [
